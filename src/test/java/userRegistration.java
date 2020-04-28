@@ -18,5 +18,12 @@ public class userRegistration {
         Assert.assertEquals(true,condition);
     }
 
+    @Test
+    public void EMail()
+    {
+        UserRegistrationMain registrationMain = new UserRegistrationMain();
+        boolean condition = registrationMain.validateEmail("diapli@bl.com.in");
+        Assert.assertEquals(true,condition);
+    }
 
 }
