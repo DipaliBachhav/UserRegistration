@@ -47,7 +47,7 @@ public class userRegistration {
     }
 
     @Test
-    public void EMail()
+    public void givenEmailId_whenProper_shouldReturnTrue()
     {
         UserRegistrationMain registrationMain = new UserRegistrationMain();
         boolean condition = registrationMain.validateEmail("dili@bl.com.in");
