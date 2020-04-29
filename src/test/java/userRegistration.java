@@ -25,12 +25,27 @@ public class userRegistration {
     }
 
 
+
     @Test
     public void LastName()
     {
         UserRegistrationMain registrationMain = new UserRegistrationMain();
         boolean condition = registrationMain.validateLastName("Bachhav");
         Assert.assertEquals(true,condition);
+    }
+
+    @Test
+    public void LastName_toShort_False(){
+        UserRegistrationMain registrationMain = new UserRegistrationMain();
+        boolean condition = registrationMain.validateLastName("aa");
+        Assert.assertEquals(false,condition);
+    }
+
+    @Test
+    public void LastName_allSmall_False(){
+        UserRegistrationMain registrationMain = new UserRegistrationMain();
+        boolean condition = registrationMain.validateLastName("bachhav");
+        Assert.assertEquals(false,condition);
     }
 
     @Test
