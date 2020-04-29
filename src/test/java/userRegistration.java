@@ -50,8 +50,16 @@ public class userRegistration {
     public void givenEmailId_whenProper_shouldReturnTrue()
     {
         UserRegistrationMain registrationMain = new UserRegistrationMain();
-        boolean condition = registrationMain.validateEmail("dili@bl.com.in");
+        boolean condition = registrationMain.validateEmail("dipali@bl.com.in");
         Assert.assertEquals(true,condition);
+    }
+
+    @Test
+    public void givenEmailId_whenNotProper_shouldReturnFalse()
+    {
+        UserRegistrationMain registrationMain = new UserRegistrationMain();
+        boolean condition = registrationMain.validateEmail("dipali@gmail.");
+        Assert.assertEquals(false,condition);
     }
 
     @Test
