@@ -78,5 +78,39 @@ public class userRegistration {
         Assert.assertEquals(false,condition);
     }
 
-    
+    @Test
+    public void givenPassword_whenProper_shouldReturnTrue()
+    {
+        UserRegistrationMain registrationMain = new UserRegistrationMain();
+        boolean condition = registrationMain.validatePassword("dip@li1Abc");
+        Assert.assertEquals(true,condition);
+    }
+
+    @Test
+    public void givenPassword_whenNotContainsUpperCase_shouldReturnFalse()
+    {
+        UserRegistrationMain registrationMain = new UserRegistrationMain();
+        boolean condition = registrationMain.validatePassword("dipali1@sd");
+        Assert.assertEquals(false,condition);
+    }
+
+    @Test
+    public void givenPassword_whenNotContainsSpecialSymbol_shouldReturnFalse()
+    {
+        UserRegistrationMain registrationMain = new UserRegistrationMain();
+        boolean condition = registrationMain.validatePassword("Dipalis2d");
+        Assert.assertEquals(false,condition);
+    }
+
+    @Test
+    public void givenPassword_whenNotContainsNumericValue_shouldReturnFalse()
+    {
+        UserRegistrationMain registrationMain = new UserRegistrationMain();
+        boolean condition = registrationMain.validatePassword("dipaliA@sd");
+        Assert.assertEquals(false,condition);
+    }
+
+
+
+
 }

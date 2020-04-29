@@ -37,5 +37,14 @@ public class UserRegistrationMain {
         }
             return false;
     }
+
+    public boolean validatePassword(String password) {
+        String passwordPattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=[#@$%&]*$){8,}";
+        if(password.matches(passwordPattern))
+        {
+            return true;
+        }
+        return false;
+    }
 }
 
