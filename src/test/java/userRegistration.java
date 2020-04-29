@@ -55,11 +55,28 @@ public class userRegistration {
     }
 
     @Test
-    public void MobileNumber()
+    public void givenMobileNumber_whenProper_shouldReturnTrue()
     {
         UserRegistrationMain registrationMain = new UserRegistrationMain();
         boolean condition = registrationMain.validateMobileNo("919859745285");
         Assert.assertEquals(true,condition);
     }
 
+    @Test
+    public void givenMobileNumber_whenContainsSpecialSymbol_shouldReturnFalse()
+    {
+        UserRegistrationMain registrationMain = new UserRegistrationMain();
+        boolean condition = registrationMain.validateMobileNo("91&25134561");
+        Assert.assertEquals(false,condition);
+    }
+
+    @Test
+    public void givenMobileNumber_whenContainsCharacter_shouldReturnFalse()
+    {
+        UserRegistrationMain registrationMain = new UserRegistrationMain();
+        boolean condition = registrationMain.validateMobileNo("912342Aa54");
+        Assert.assertEquals(false,condition);
+    }
+
+    
 }
