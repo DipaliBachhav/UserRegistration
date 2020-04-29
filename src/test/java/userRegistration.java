@@ -4,30 +4,28 @@ import org.junit.Test;
 
 public class userRegistration {
     @Test
-    public void FirstName(){
+    public void givenFirstName_whenProper_shouldReturnTrue(){
         UserRegistrationMain registrationMain = new UserRegistrationMain();
         boolean condition = registrationMain.validateFirstName("Dipali");
         Assert.assertEquals(true,condition);
     }
 
     @Test
-    public void FirstName_toShort_False(){
+    public void givenFirstName_whenToShort_shouldReturnFalse(){
         UserRegistrationMain registrationMain = new UserRegistrationMain();
         boolean condition = registrationMain.validateFirstName("Di");
         Assert.assertEquals(false,condition);
     }
 
     @Test
-    public void FirstName_allSmall_False(){
+    public void givenFirstName_whenSmall_shouldReturnFalse(){
         UserRegistrationMain registrationMain = new UserRegistrationMain();
         boolean condition = registrationMain.validateFirstName("dipali");
         Assert.assertEquals(false,condition);
     }
 
-
-
     @Test
-    public void LastName()
+    public void givenLastName_whenProper_shouldReturnTrue()
     {
         UserRegistrationMain registrationMain = new UserRegistrationMain();
         boolean condition = registrationMain.validateLastName("Bachhav");
@@ -35,14 +33,14 @@ public class userRegistration {
     }
 
     @Test
-    public void LastName_toShort_False(){
+    public void givenLastName_whenToShort_shouldReturnFalse(){
         UserRegistrationMain registrationMain = new UserRegistrationMain();
         boolean condition = registrationMain.validateLastName("aa");
         Assert.assertEquals(false,condition);
     }
 
     @Test
-    public void LastName_allSmall_False(){
+    public void givenLastName_whenSmall_shouldReturnFalse(){
         UserRegistrationMain registrationMain = new UserRegistrationMain();
         boolean condition = registrationMain.validateLastName("bachhav");
         Assert.assertEquals(false,condition);

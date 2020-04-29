@@ -8,11 +8,7 @@ public class UserRegistrationMain {
         {
             return true;
         }
-        else
-        {
             return false;
-        }
-
     }
 
     public boolean validateLastName(String lName) {
@@ -21,10 +17,7 @@ public class UserRegistrationMain {
         {
             return true;
         }
-        else
-        {
             return false;
-        }
     }
 
     public boolean validateEmail(String email) {
@@ -33,10 +26,7 @@ public class UserRegistrationMain {
         {
             return true;
         }
-        else
-        {
             return false;
-        }
     }
 
     public boolean validateMobileNo(String mobile) {
@@ -45,11 +35,7 @@ public class UserRegistrationMain {
         {
             return true;
         }
-        else
-        {
             return false;
-        }
-
     }
 }
 
