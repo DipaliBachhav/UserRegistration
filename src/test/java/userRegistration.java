@@ -11,6 +11,21 @@ public class userRegistration {
     }
 
     @Test
+    public void FirstName_toShort_False(){
+        UserRegistrationMain registrationMain = new UserRegistrationMain();
+        boolean condition = registrationMain.validateFirstName("Di");
+        Assert.assertEquals(false,condition);
+    }
+
+    @Test
+    public void FirstName_allSmall_False(){
+        UserRegistrationMain registrationMain = new UserRegistrationMain();
+        boolean condition = registrationMain.validateFirstName("dipali");
+        Assert.assertEquals(false,condition);
+    }
+
+
+    @Test
     public void LastName()
     {
         UserRegistrationMain registrationMain = new UserRegistrationMain();
@@ -22,7 +37,15 @@ public class userRegistration {
     public void EMail()
     {
         UserRegistrationMain registrationMain = new UserRegistrationMain();
-        boolean condition = registrationMain.validateEmail("diapli@bl.com.in");
+        boolean condition = registrationMain.validateEmail("dili@bl.com.in");
+        Assert.assertEquals(true,condition);
+    }
+
+    @Test
+    public void MobileNumber()
+    {
+        UserRegistrationMain registrationMain = new UserRegistrationMain();
+        boolean condition = registrationMain.validateMobileNo("919859745285");
         Assert.assertEquals(true,condition);
     }
 

@@ -38,5 +38,18 @@ public class UserRegistrationMain {
             return false;
         }
     }
+
+    public boolean validateMobileNo(String mobile) {
+        String number="[1-9]{2}[0-9]{10}";
+        if(mobile.matches(number))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
 }
 
